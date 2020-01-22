@@ -25,8 +25,11 @@ const app = express()
   .use(cors())
   .use(countries(connection));
 
+  app.get('/', (req, res) => {
+    res.send('Trial App');
+  });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log("Connected to port " + port);
 });
