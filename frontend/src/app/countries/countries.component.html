@@ -1,0 +1,17 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Population</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let country of countries">
+        <td>{{ country.Name }}</td>
+        <td>{{ country.Population }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
