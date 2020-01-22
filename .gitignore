@@ -11,8 +11,7 @@ deployKey.txt
 /bazel-out
 
 # dependencies
-frontend/node_modules/
-backend/node_modules/
+node_modules/
 
 # environment variable files
 .env
