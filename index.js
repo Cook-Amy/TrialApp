@@ -8,7 +8,7 @@ const countries = require('./models/countries');
 const connection = mysql.createConnection({
   host: 'database-1.cc9faes6cfe1.us-east-2.rds.amazonaws.com',
   user: 'admin',
-  password: 'db2020drapp',
+  password: '',
   database: 'countries'
 });
 
