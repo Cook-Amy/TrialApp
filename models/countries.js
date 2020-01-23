@@ -16,11 +16,41 @@ function createRouter(db) {
         console.log("Results back from DB: ");
         console.log(results);
         res.status(200).json(results);
+
+        let str = formatString(json(results));
+
+        res.send(str);
+
       }
     });
   });
 
   return router;
+}
+
+function formatString(results) {
+  let str = `
+      <table class="table">
+        <thead>
+          <tr>
+           <th>City</th>
+            <th>Population</th>
+          </tr>
+      </thead>
+      <tbody>`;
+  for(r of results) {
+    str += `
+        <tr>
+          <td>` + r.Name + `</td>
+          <td>` + r.Population + `</td>
+        </tr>`
+  }
+
+  str += `
+      </tbody>
+    </table>`;
+
+    return str;
 }
 
 module.exports = createRouter;
