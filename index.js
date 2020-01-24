@@ -32,9 +32,9 @@ const app = express()
   .use(cors())
   .use(countries(connection));
 
-  // app.get('/', (req, res) => {
-  //   res.send('Trial App');
-  // });
+  app.get('/', (req, res) => {
+    res.send('Trial #2');
+  });
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
