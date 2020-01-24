@@ -30,11 +30,12 @@ const app = express()
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({ extended: false }))
   .use(cors())
-  .use(countries(connection));
+  .use(countries(connection))
+  .use(express.static('public'));
 
-  app.get('/', (req, res) => {
-    res.send('Trial #2');
-  });
+  // app.get('/', (req, res) => {
+  //   res.send('Trial #2');
+  // });
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
