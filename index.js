@@ -20,8 +20,6 @@ const app = express()
 
   app.get('/countries', countriesController.getAllCountries);
 
-
-
   // app.get('/', (req, res) => {
   //   res.send('Trial #2');
   // });
