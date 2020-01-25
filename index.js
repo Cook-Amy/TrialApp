@@ -16,13 +16,13 @@ const app = express()
   .use(express.static('public'));
 
 
-  const countriesController = require('./models/countriesModel');
+  // const countriesController = require('./models/countriesModel');
 
-  app.get('/countries', countriesController.getAllCountries);
+  // app.get('/countries', countriesController.getAllCountries);
 
-  // app.get('/', (req, res) => {
-  //   res.send('Trial #2');
-  // });
+  app.get('/', (req, res) => {
+    res.send('Trial #2');
+  });
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
