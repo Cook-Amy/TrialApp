@@ -15,12 +15,12 @@ function createRouter(db) {
       else {
         console.log("Results back from DB: ");
         console.log(results);
-        // res.status(200).json(results);
+        res.status(200).json(results);
 
-        let str = formatString(results);
+        // let str = formatString(results);
         // console.log(str);
 
-        res.send(str);
+        // res.send(str);
 
       }
     });
@@ -29,31 +29,29 @@ function createRouter(db) {
   return router;
 }
 
-function formatString(results) {
-  let str = `
-      <table>
-        <thead>
-          <tr>
-           <th>Country</th>
-           <th>Capital</th>
-           <th>Population</th>
-          </tr>
-      </thead>
-      <tbody>`;
-  for(r of results) {
-    str += `
-        <tr>
-          <td>` + r.Name + `</td>
-          <td>` + r.Capital + `</td>
-          <td>` + r.Population + `</td>
-        </tr>`
-  }
+// function formatString(results) {
+//   let str = `
+//       <table>
+//         <thead>
+//           <tr>
+//            <th>Country</th>
+//            <th>Capital</th>
+//           </tr>
+//       </thead>
+//       <tbody>`;
+//   for(r of results) {
+//     str += `
+//         <tr>
+//           <td>` + r.Name + `</td>
+//           <td>` + r.Capital + `</td>
+//         </tr>`
+//   }
 
-  str += `
-      </tbody>
-    </table>`;
+//   str += `
+//       </tbody>
+//     </table>`;
 
-    return str;
-}
+//     return str;
+// }
 
 module.exports = createRouter;
