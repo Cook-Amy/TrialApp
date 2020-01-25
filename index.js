@@ -15,14 +15,15 @@ const app = express()
   .use(cors())
   .use(express.static('public'));
 
-
-  // const countriesController = require('./models/countriesModel');
-
-  // app.get('/countries', countriesController.getAllCountries);
-
   app.get('/', (req, res) => {
-    res.send('Trial #2');
+    console.log("Entered homepage");
   });
+
+  const countriesController = require('./models/countriesModel');
+
+  app.get('/countries', countriesController.getAllCountries);
+
+
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
