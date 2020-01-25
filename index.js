@@ -19,9 +19,9 @@ const app = express()
     console.log("Entered homepage");
   });
 
-  const countriesController = require('./models/countriesModel');
+  // const countriesController = require('./models/countriesModel');
 
-  app.get('/countries', countriesController.getAllCountries);
+  // app.get('/countries', countriesController.getAllCountries);
 
 
 
